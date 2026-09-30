@@ -1,0 +1,44 @@
+<svg width="128" height="128" viewBox="0 0 160 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="fav-blue" x1="20" y1="20" x2="140" y2="140" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stopColor="#0284c7" />
+      <stop offset="50%" stopColor="#1d4ed8" />
+      <stop offset="100%" stopColor="#0b2046" />
+    </linearGradient>
+    <linearGradient id="fav-gold" x1="10" y1="120" x2="150" y2="30" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stopColor="#f59e0b" />
+      <stop offset="50%" stopColor="#fbbf24" />
+      <stop offset="100%" stopColor="#d97706" />
+    </linearGradient>
+    <radialGradient id="fav-globe" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stopColor="#38bdf8" />
+      <stop offset="100%" stopColor="#0369a1" />
+    </radialGradient>
+  </defs>
+
+  <!-- Dark navy rounded background -->
+  <rect width="160" height="160" rx="36" fill="#0b192c" />
+
+  <!-- Circular Globe -->
+  <circle cx="80" cy="80" r="42" fill="url(#fav-globe)" />
+  <circle cx="80" cy="80" r="42" stroke="#ffffff" strokeOpacity="0.4" strokeWidth="2" />
+  <ellipse cx="80" cy="80" rx="42" ry="16" stroke="#ffffff" strokeOpacity="0.4" strokeWidth="1.5" />
+  <ellipse cx="80" cy="80" rx="18" ry="42" stroke="#ffffff" strokeOpacity="0.4" strokeWidth="1.5" />
+
+  <!-- M Shape -->
+  <path d="M34 118V56l24 32 20-28v58H66V88L50 110h-6l-10-12v20H34z" fill="url(#fav-blue)" />
+  
+  <!-- H Shape -->
+  <path d="M94 56v62h12V92h18v26h12V56h-12v24h-18V56H94z" fill="url(#fav-blue)" />
+
+  <!-- Golden Orbit Arc -->
+  <path
+    d="M16 112 C 14 126, 40 140, 76 138 C 114 136, 144 116, 146 92 C 147 76, 132 60, 118 48 C 108 40, 96 34, 88 32 C 84 31, 80 32, 82 36 C 85 41, 98 46, 110 56 C 126 70, 134 84, 126 98 C 116 114, 84 126, 52 122 C 34 120, 22 114, 16 112 Z"
+    fill="url(#fav-gold)"
+  />
+
+  <!-- Flying Airplane on Orbit -->
+  <g transform="translate(112, 28) rotate(32) scale(0.9)">
+    <path d="M20 0 L15 14 L0 18 L15 22 L17 32 L22 23 L32 24 L24 16 L36 10 Z" fill="#ffffff" />
+  </g>
+</svg>

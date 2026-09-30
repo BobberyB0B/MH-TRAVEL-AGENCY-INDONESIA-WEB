@@ -1,0 +1,6 @@
+{
+  "name": "MH Travel Agency Indonesia",
+  "description": "Solusi Visa & Dokumen Perjalanan Anda. Jasa pengurusan visa, konsultasi visa, itinerary, invitation letter, dan dokumen perjalanan resmi.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

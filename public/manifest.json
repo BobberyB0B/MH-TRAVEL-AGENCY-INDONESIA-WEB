@@ -1,0 +1,17 @@
+{
+  "short_name": "MH Travel",
+  "name": "MH TRAVEL AGENCY INDONESIA",
+  "description": "Solusi Visa & Dokumen Perjalanan Anda. Jasa pengurusan visa, konsultasi berkas, dan dokumen resmi.",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "type": "image/svg+xml",
+      "sizes": "any"
+    }
+  ],
+  "start_url": "/",
+  "background_color": "#020617",
+  "theme_color": "#020617",
+  "display": "standalone",
+  "orientation": "portrait-primary"
+}
