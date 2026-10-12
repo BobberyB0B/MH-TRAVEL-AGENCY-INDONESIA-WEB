@@ -65,6 +65,8 @@
       "openingHours": "Mo-Sa 08:30-20:00",
       "paymentAccepted": "Bank Transfer BCA"
     }
+    </script>
+
     <!-- Nonaktifkan & Hapus Netlify Drawer / Feedback Toolbar / Badge -->
     <style>
       #netlify-drawer,
@@ -74,6 +76,7 @@
       iframe[src*="netlify"],
       iframe[id*="netlify"],
       iframe[name*="netlify"],
+      iframe[title*="Netlify"],
       div[class*="netlify"],
       div[id*="netlify-drawer"] {
         display: none !important;
@@ -93,6 +96,8 @@
           const selectors = [
             '#netlify-drawer',
             'iframe[src*="netlify"]',
+            'iframe[id*="netlify"]',
+            'iframe[title*="Netlify"]',
             '[data-netlify-deploy-id]',
             '.netlify-badge',
             '.netlify-drawer'
