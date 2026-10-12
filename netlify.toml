@@ -2,7 +2,20 @@
   publish = "dist"
   command = "npm run build"
 
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
+# Nonaktifkan Netlify Drawer & Collaborative Feedback Toolbar
+[build.environment]
+  NETLIFY_DRAWER_ENABLED = "false"
+
+[context.production]
+  drawer = false
+
+[context.deploy-preview]
+  drawer = false
+
+[context.branch-deploy]
+  drawer = false
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"

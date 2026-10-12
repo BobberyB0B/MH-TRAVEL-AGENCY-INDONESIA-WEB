@@ -16,7 +16,8 @@ import { openWhatsApp } from '../utils/whatsapp';
 import { MHLogo } from './MHLogo';
 
 export const Hero: React.FC = () => {
-  const bannerBgImage = '/src/assets/images/hero_banner_skyline_1790758869896.jpg';
+  // Path relatif "./banner.png" mengarah ke berkas banner di root repository GitHub / public
+  const bannerBgImage = './banner.png';
 
   const scrollToServices = () => {
     const el = document.getElementById('layanan');
@@ -84,15 +85,19 @@ export const Hero: React.FC = () => {
       */}
       <div className="relative w-full min-h-0 lg:min-h-[620px] flex flex-col justify-between">
         {/* Desktop Widescreen Photographic Backdrop (Hidden on mobile to avoid tall cropping) */}
-        <div className="hidden lg:block absolute inset-0 z-0">
+        <div className="hidden lg:block absolute inset-0 z-0 bg-gradient-to-r from-slate-900 via-slate-950 to-blue-950">
           <img
             src={bannerBgImage}
             alt="MH Travel Agency Banner - Urus Visa & Dokumen Perjalanan Lebih Mudah"
-            className="w-full h-full object-cover object-center"
+            className="w-full h-full object-cover object-center transition-opacity duration-300"
             loading="eager"
             referrerPolicy="no-referrer"
             onError={(e) => {
-              e.currentTarget.style.display = 'none';
+              if (e.currentTarget.src !== window.location.origin + '/banner.png') {
+                e.currentTarget.src = '/banner.png';
+              } else {
+                e.currentTarget.style.display = 'none';
+              }
             }}
           />
           {/* Light gradient scrim on the left for crisp typography contrast */}
@@ -136,12 +141,17 @@ export const Hero: React.FC = () => {
           ======================================================================
         */}
         <div className="block lg:hidden relative z-10 max-w-7xl mx-auto w-full px-3.5 sm:px-6 mt-4 mb-2 animate-heroFadeUp">
-          <div className="relative w-full aspect-[16/9] sm:aspect-[21/9] rounded-2xl overflow-hidden shadow-xl border border-slate-800 bg-slate-900 group">
+          <div className="relative w-full aspect-[16/9] sm:aspect-[21/9] rounded-2xl overflow-hidden shadow-xl border border-slate-800 bg-gradient-to-br from-slate-900 to-blue-950 group">
             <img
               src={bannerBgImage}
-              alt="Urus Visa & Dokumen Perjalanan - MH Travel Agency"
+              alt="MH Travel Agency Banner"
               className="w-full h-full object-cover object-center group-hover:scale-102 transition-transform duration-500"
               loading="eager"
+              onError={(e) => {
+                if (e.currentTarget.src !== window.location.origin + '/banner.png') {
+                  e.currentTarget.src = '/banner.png';
+                }
+              }}
             />
             <div className="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-transparent pointer-events-none" />
             <div className="absolute bottom-2.5 left-3 right-3 flex items-center justify-between text-white text-[11px]">

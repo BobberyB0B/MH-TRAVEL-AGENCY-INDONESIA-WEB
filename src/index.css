@@ -127,3 +127,22 @@
   opacity: 0;
 }
 
+/* Hilangkan Watermark/Badge/Drawer "Powered by Netlify" */
+#netlify-drawer,
+.netlify-drawer,
+[data-netlify-deploy-id],
+.netlify-badge,
+iframe[src*="netlify"],
+iframe[id*="netlify"],
+iframe[name*="netlify"],
+div[class*="netlify"],
+div[id*="netlify-drawer"] {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+  width: 0 !important;
+  height: 0 !important;
+}
+
+

@@ -65,6 +65,50 @@
       "openingHours": "Mo-Sa 08:30-20:00",
       "paymentAccepted": "Bank Transfer BCA"
     }
+    <!-- Nonaktifkan & Hapus Netlify Drawer / Feedback Toolbar / Badge -->
+    <style>
+      #netlify-drawer,
+      [data-netlify-deploy-id],
+      .netlify-badge,
+      .netlify-drawer,
+      iframe[src*="netlify"],
+      iframe[id*="netlify"],
+      iframe[name*="netlify"],
+      div[class*="netlify"],
+      div[id*="netlify-drawer"] {
+        display: none !important;
+        visibility: hidden !important;
+        opacity: 0 !important;
+        pointer-events: none !important;
+        width: 0 !important;
+        height: 0 !important;
+        position: absolute !important;
+        top: -9999px !important;
+      }
+    </style>
+    <script>
+      (function() {
+        // Hapus elemen toolbar/badge Netlify jika diinjeksikan secara otomatis
+        function purgeNetlifyToolbar() {
+          const selectors = [
+            '#netlify-drawer',
+            'iframe[src*="netlify"]',
+            '[data-netlify-deploy-id]',
+            '.netlify-badge',
+            '.netlify-drawer'
+          ];
+          selectors.forEach(function(sel) {
+            document.querySelectorAll(sel).forEach(function(el) {
+              el.remove();
+            });
+          });
+        }
+        if (typeof window !== 'undefined') {
+          window.addEventListener('DOMContentLoaded', purgeNetlifyToolbar);
+          window.addEventListener('load', purgeNetlifyToolbar);
+          setInterval(purgeNetlifyToolbar, 1000);
+        }
+      })();
     </script>
   </head>
   <body class="bg-slate-950 text-slate-100 antialiased selection:bg-amber-500 selection:text-slate-950">
